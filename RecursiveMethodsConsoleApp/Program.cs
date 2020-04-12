@@ -39,7 +39,8 @@ namespace RecursiveMethodsConsoleApp
 
             int value = ConsoleHelpers.FindArrayElement();
 
-            Console.WriteLine($"Value { value } is at position: { Helpers.BinarySearch(sortedArray, value, 0, sortedArray.Length - 1)}");
+            Console.WriteLine($"Value { value } is at position: { Helpers.BinarySearch(sortedArray, value, 0, sortedArray.Length - 1)}", Console.ForegroundColor = ConsoleColor.Blue);
+            Console.ResetColor();
 
             Console.ReadLine();
         }
