@@ -97,5 +97,28 @@ namespace RecursiveMethods.Library
 
             return FibonnacciNumber(n - 2) + FibonnacciNumber(n - 1);
         }
+
+        public static object BinarySearch(int[] array, int valueToFind, int min, int max)
+        {
+            if (array?.Length == 0 || valueToFind < array[min] || valueToFind > array[max])
+            {
+                return "[value is not within the array]";
+            }
+
+            int middle = (min + max) / 2;
+
+            if (valueToFind == array[middle])
+            {
+                return middle;
+            }
+            else if (valueToFind < array[middle])
+            {
+                return BinarySearch(array, valueToFind, min, middle);
+            }
+            else
+            {
+                return BinarySearch(array, valueToFind, middle, max);
+            }
+        }
     }
 }

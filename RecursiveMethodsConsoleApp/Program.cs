@@ -33,6 +33,14 @@ namespace RecursiveMethodsConsoleApp
             ConsoleHelpers.PrintLongArray("Fibonacci numbers", fibonacciSecondArray);
             */
 
+            int[] sortedArray = ConsoleHelpers.ReadSortedArrayFromConsole("SortedArray");
+
+            ConsoleHelpers.PrintIntArray("SortedArray", sortedArray);
+
+            int value = ConsoleHelpers.FindArrayElement();
+
+            Console.WriteLine($"Value { value } is at position: { Helpers.BinarySearch(sortedArray, value, 0, sortedArray.Length - 1)}");
+
             Console.ReadLine();
         }
     }
